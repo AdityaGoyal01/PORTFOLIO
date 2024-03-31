@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #4b4a4d;
+  --primary-color-dark: #151416;
+  --secondary-color: #3a3732;
+  --text-dark: #242930;
+  --text-light: #3a3838;
+  --extra-light: #d6d6d0;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(242, 247, 247);
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(32, 32, 83);
+  text-decoration: none;
+  z-index: 1000;
+
+  overflow: hidden;
+  border:1px solid;
+  height: 60px;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo  {
+  color:white;
+  font-size: 2rem;
+  font-weight:900;
+  
+}
+
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: left 0.3s; 
+  color: white;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent ;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.Home {
+  background-color: rgb(242, 247, 247);
+}
+
+.Home__container {
+  min-height: 100vh;
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  background-color:  #ecedeeb6;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+
+.subtitle {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-family:  Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title span {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: .1rem;
+ font-family:'Times New Roman', Times, serif;
+  
+}
+
+
+
+.social-media a {
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 3px;
+  background: transparent;
+  border: .2rem solid;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+ 
+
+}
+
+
+
+.insta_handle {
+  color: #e91e95;
+  font-size: 35px;
+}
+
+.twitter_handle {
+
+  color: #1e9fe9;
+  font-size: 35px;
+}
+
+.linkdn_handle {
+  color: #91898d;
+  font-size: 35px;
+}
+
+.social-media a:hover {
+  background:white;
+  color: var(--primary-color-dark);
+}
+
+#adi-btn button {
+  font-size: .50rem;
+  background-color:rgb(208, 220, 223);
+  color: var(--primary-color-dark);
+  padding: .1rem;
+  margin: .2rem;
+  border-radius:.5rem;
+  border-color:transparent;
+  width: 80px;
+  height: 35px;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+#adi-btn button:hover{
+  background-color: black;
+  color: white;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+  animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.image img {
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  
+}
+
+.image img:hover {
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+}
+
+.About {
+  display: flex;
+  gap: 2rem;
+  background:white;
+  min-height: 100vh;
+  width: 196vh;
+  border-radius: 2rem;
+  margin-left: 35px;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.About-image {
+  width: 80vh;
+
+}
+
+
+.About-image img {
+  width: 30vw;
+  height: 30vw;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 100%;
+}
+
+.About .subtitle {
+  font-weight: 800;
+  font-size: 4.5em;
+  text-decoration: underline;
+  margin-top: 10rem;
+
+}
+
+.About .title {
+  color: rgb(3, 3, 29);
+  font-size: 3rem;
+}
+
+.About h1 {
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 2rem;
+
+}
+
+.About p {
+  font-size: 1.5rem;
+  margin: .25rem;
+  color: rgba(25, 20, 70, 0.76);
+}
+.About .skills{
+  margin-top: 3.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.About .skills a {
+  padding: 2px;
+  margin: 3.5px;
+  font-size: 50px;
+  color: inherit;
+  border: .2rem solid;
+  border-radius: 50%;
+  text-decoration: none;
+  background: transparent;
+}
+
+.About .skills a:hover {
+  color: white;
+  background: #3a3732;
+}
+
+
+.Projects {
+  position: relative;
+}
+
+.project {
+  margin: 30px;
+  width: 30%;
+  border: 2px solid #ccc;
+  border-radius: 2rem;
+  padding: 40px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: white;
+  
+
+}
+
+#heading {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 7rem;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+.section-container {
+  min-height: vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.project img {
+  max-width: 90%;
+  height: 70%;
+  margin-bottom: 10px;
+  /* Optional: Adjust spacing */
+}
+
+.project button {
+  color: black;
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 2rem;
+  width: 60px;
+  font-weight: 600;
+}
+
+.project button:hover {
+  color: white;
+  background-color: black;
+
+}
+
+.Contact {
+  min-height: 100vh;
+  margin: 3rem;
+  background-color: white;
+  padding-top: 60px;
+}
+
+.Contact h1 {
+  margin-top: 50px;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #0a0c0e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+#scrollToTopButton {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #0056b3;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.footer {
+  background-color: #b8c6ecef;
+  color:black;
+  text-align: center;
+  font-size: 1rem;
+
+  height: 60px;
+  overflow: hidden;
+  font-weight: 800;
+
+}
+
+.modal-content {
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 0.5px solid #888;
+  border-radius: 2rem;
+  width: 40%;
+  height: 20%;
+  font-size: 25px;
+font-weight:900;
+  color: rgb(19, 16, 16,)
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  background-color:rgba(131, 121, 121, 0.38)  ;
+ 
+}
+
+
+
+
+@media only screen and (max-width< 768px) {
+  /* Adjustments for smaller screens */
+
+  nav .logo a {
+    font-size: 1.2rem;
+    /* Decrease font size for logo */
+  }
+
+  .nav__content {
+    padding: 1rem;
+    /* Decrease padding for navigation content */
+  }
+
+  ul {
+    flex-direction: column;
+    /* Stack navigation items vertically */
+  }
+
+  ul li a {
+    padding: 0.5rem 0;
+    /* Adjust padding for navigation items */
+    display: block;
+    /* Ensure navigation items take full width */
+  }
+
+  .Home__container {
+    grid-template-columns: 1fr;
+    /* Switch to single column layout */
+    gap: 2rem;
+    /* Reduce gap between grid items */
+  }
+
+  .image img {
+    height: 300px;
+    /* Adjust image height */
+    width: 300px;
+    /* Adjust image width */
+  }
+
+  .About {
+    width: auto;
+    /* Remove fixed width */
+    margin-left: 0;
+    /* Remove left margin */
+    padding: 2rem;
+    /* Add padding for smaller screens */
+  }
+
+  .About-image img {
+    width: 80%;
+    /* Adjust image width */
+    height: auto;
+    /* Ensure image height scales proportionally */
+  }
+
+  .About .subtitle {
+    font-size: 2.5rem;
+    /* Adjust subtitle font size */
+  }
+
+  .About .title {
+    font-size: 2rem;
+    /* Adjust title font size */
+  }
+
+  .About h1 {
+    font-size: 1.5rem;
+    /* Adjust heading font size */
+  }
+
+  .About p {
+    font-size: 1.2rem;
+    /* Adjust paragraph font size */
+  }
+
+  .Projects {
+    text-align: center;
+    /* Center-align project sections */
+  }
+
+  .project {
+    width: 80%;
+    /* Adjust project width */
+    margin: 20px auto;
+    /* Center-align projects */
+  }
+
+  #heading {
+    font-size: 2.5rem;
+    /* Adjust heading font size */
+    padding-top: 5rem;
+    /* Adjust top padding */
+  }
+
+  .Contact h1 {
+    font-size: 2rem;
+    /* Adjust heading font size */
+  }
+
+  .contact-form {
+    max-width: 90%;
+    /* Adjust contact form width */
+  }
+}
