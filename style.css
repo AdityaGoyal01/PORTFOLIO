@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-  --primary-color: #4b4a4d;
-  --primary-color-dark: #151416;
-  --secondary-color: #3a3732;
-  --text-dark: #242930;
-  --text-light: #3a3838;
-  --extra-light: #d6d6d0;
   --max-width: 1200px;
 }
 
@@ -25,10 +19,9 @@ body {
 nav {
   width: 100%;
   position: fixed;
-  background-color: rgb(71, 71, 82);
+  background-color: rgb(242, 247, 247);
   text-decoration: none;
   z-index: 1000;
-
   overflow: hidden;
   border:1px solid;
   height: 60px;
@@ -41,23 +34,21 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-}
-
-.nav__content .logo  {
-  color:white;
-  font-size: 2rem;
-  font-weight:900;
   
 }
 
+.nav__content .logo  {
+  color:rgb(93, 77, 100);
+  font-size: 2rem;
+  font-weight:900;
+}
 
 ul {
   display: flex;
   align-items: center;
   gap: 1rem;
   transition: left 0.3s; 
-  color: white;
+  color: rgb(154, 128, 156);
 }
 
 ul li a {
@@ -65,7 +56,7 @@ ul li a {
   border: 2px solid transparent ;
   font-size: 1.25rem;
   font-weight: 600;
-  color: white;
+  color: rgb(93, 77, 100);
   transition: 0.3s;
   text-decoration: none;
 }
@@ -83,21 +74,17 @@ ul li a {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   background-color:  #ecedeeb6;
-  
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-
 }
 
 .subtitle {
   font-size: 2rem;
   letter-spacing: 2px;
-  color: var(--text-light);
   font-weight: 600;
   margin-bottom: 1.5rem;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -107,7 +94,6 @@ ul li a {
   font-size: 3rem;
   font-weight: 400;
   line-height: 3rem;
-  color: var(--text-dark);
   margin-bottom: 1rem;
   font-family:  Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -120,8 +106,6 @@ ul li a {
   
 }
 
-
-
 .social-media a {
   align-items: center;
   justify-content: center;
@@ -132,25 +116,15 @@ ul li a {
   border-radius: 50%;
   text-decoration: none;
   font-size: 30px;
- 
-
-}
-
-
-
-.insta_handle {
-  color: #e91e95;
-  font-size: 35px;
 }
 
 .twitter_handle {
-
   color: #1e9fe9;
   font-size: 35px;
 }
 
 .linkdn_handle {
-  color: #91898d;
+  color: #252159;
   font-size: 35px;
   
 }
@@ -167,7 +141,6 @@ ul li a {
 #adi-btn button {
   font-size: .75rem;
   background-color:rgb(208, 220, 223);
-  color: var(--primary-color-dark);
   padding: .1rem;
   margin: .2rem;
   border-radius:.5rem;
@@ -203,12 +176,10 @@ ul li a {
   }
 }
 
-
 .image img {
   height: 400px;
   width: 400px;
   border-radius: 100%;
-  
 }
 
 .image img:hover {
@@ -227,43 +198,14 @@ ul li a {
   margin-left: 35px;
   justify-content: center;
   align-items: center;
-
-
-}
-
-.About-image {
-  width: 80vh;
-
-}
-
-
-.About-image img {
-  width: 30vw;
-  height: 30vw;
-  padding: 1.5rem;
-  margin: 1rem;
-  border-radius: 100%;
-}
-
-.About .subtitle {
-  font-weight: 800;
-  font-size: 4.5em;
-  text-decoration: underline;
-  margin-top: 10rem;
-
+  text-align: center;
 }
 
 .About .title {
   color: rgb(3, 3, 29);
   font-size: 3rem;
-}
-
-.About h1 {
-  align-items: center;
   justify-content: center;
-  text-align: left;
-  font-size: 2rem;
-
+  align-items: center;
 }
 
 .About p {
@@ -271,12 +213,6 @@ ul li a {
   margin: .25rem;
   color: rgba(25, 20, 70, 0.76);
 }
-.About .skills{
-  margin-top: 3.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
 
 
 .About .skills a {
@@ -288,13 +224,9 @@ ul li a {
   border-radius: 50%;
   text-decoration: none;
   background: transparent;
+  align-items: center;
+  justify-content: center;
 }
-
-.About .skills a:hover {
-  color: white;
-  background: #3a3732;
-}
-
 
 .Projects {
   position: relative;
@@ -313,8 +245,6 @@ ul li a {
   align-items: center;
   min-height: 50vh;
   background-color: white;
-  
-
 }
 
 #heading {
@@ -333,8 +263,8 @@ ul li a {
 }
 
 .project img {
-  max-width: 90%;
-  height: 70%;
+  max-width: 50%;
+  height: 50%;
   margin-bottom: 10px;
   /* Optional: Adjust spacing */
 }
@@ -419,7 +349,6 @@ ul li a {
   line-height: 1;
   cursor: pointer;
   position: relative;
-
 }
 
 .footer {
@@ -432,6 +361,68 @@ ul li a {
   font-weight: 800;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .nav__content {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .Home__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .About {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .About .skills {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .Contact {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
 
 
 
