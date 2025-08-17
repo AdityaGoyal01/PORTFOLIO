@@ -159,7 +159,7 @@ ul li a {
 .image {
   display: grid;
   place-items: center;
-  animation: bounce 5s infinite;
+  /*animation: bounce 5s infinite;*/
 }
 
 @keyframes bounce {
@@ -177,15 +177,10 @@ ul li a {
 }
 
 .image img {
-  height: 400px;
-  width: 400px;
-  border-radius: 100%;
-}
-
-.image img:hover {
-  width: 450px;
-  height: 450px;
-  border-radius: 100%;
+width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .About {
@@ -380,9 +375,12 @@ ul li a {
   }
 
   .Home__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
   }
 
   .image img {
@@ -393,8 +391,9 @@ ul li a {
   .About {
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    margin: 0 auto;
     padding: 1rem;
+    align-items: center;
   }
 
   .About .skills {
@@ -402,10 +401,19 @@ ul li a {
     justify-content: center;
   }
 
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   .project {
     width: 100%;
     margin: 10px 0;
     padding: 20px;
+    display: block;
+    width: 100%;
   }
 
   .Contact {
