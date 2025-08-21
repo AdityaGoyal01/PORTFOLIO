@@ -2,6 +2,7 @@
 
 :root {
   --max-width: 1200px;
+
 }
 
 * {
@@ -9,61 +10,16 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(242, 247, 247);
+  background-color:white;
 }
 
-nav {
-  width: 100%;
-  position: fixed;
-  background-color: rgb(242, 247, 247);
-  text-decoration: none;
-  z-index: 1000;
-  overflow: hidden;
-  border:1px solid;
-  height: 60px;
-}
 
-.nav__content {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
 
-.nav__content .logo  {
-  color:rgb(93, 77, 100);
-  font-size: 2rem;
-  font-weight:900;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: left 0.3s; 
-  color: rgb(154, 128, 156);
-}
-
-ul li a {
-  padding: 0.5rem 1rem;
-  border: 2px solid transparent ;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: rgb(93, 77, 100);
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.Home {
-  background-color: rgb(242, 247, 247);
-}
 
 .Home__container {
   min-height: 100vh;
@@ -73,7 +29,7 @@ ul li a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
-  background-color:  #ecedeeb6;
+
 }
 
 .content {
@@ -91,19 +47,20 @@ ul li a {
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 3rem;
-  margin-bottom: 1rem;
-  font-family:  Tahoma, Geneva, Verdana, sans-serif;
+  
+  
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+  font-family:  Playfair Display, serif;
+  
 }
 
 .title span {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin: .1rem;
- font-family:'Times New Roman', Times, serif;
-  
+   font-size: 4rem;
+  font-weight: 500;
+ font-family:Playfair Display, serif;
+  margin-bottom: 0.25rem;
 }
 
 .social-media a {
@@ -138,23 +95,6 @@ ul li a {
   color: var(--primary-color-dark);
 }
 
-#adi-btn button {
-  font-size: .75rem;
-  background-color:rgb(208, 220, 223);
-  padding: .1rem;
-  margin: .2rem;
-  border-radius:.5rem;
-  border-color:transparent;
-  width: 80px;
-  height: 35px;
-  margin-top: 2rem;
-  font-weight: 600;
-}
-
-#adi-btn button:hover{
-  background-color: black;
-  color: white;
-}
 
 .image {
   display: grid;
@@ -162,19 +102,7 @@ ul li a {
   /*animation: bounce 5s infinite;*/
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
 
-  50% {
-    transform: translateY(-2.5rem);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
 
 .image img {
 width: 60%;
@@ -183,30 +111,34 @@ width: 60%;
   border-radius: 50%;
 }
 
-.About {
+.About{
   display: flex;
   gap: 2rem;
   background:white;
-  min-height: 100vh;
   width: 196vh;
   border-radius: 2rem;
   margin-left: 35px;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   text-align: center;
 }
 
 .About .title {
   color: rgb(3, 3, 29);
-  font-size: 3rem;
+  font-size: 5rem;
   justify-content: center;
   align-items: center;
+   font-family: Playfair Display, serif;
+
 }
 
 .About p {
   font-size: 1.5rem;
   margin: .25rem;
-  color: rgba(25, 20, 70, 0.76);
+  color: grey;
+   font-family: Playfair Display, serif;
+   margin-bottom: 1.5rem;
 }
 
 
@@ -223,8 +155,9 @@ width: 60%;
   justify-content: center;
 }
 
-.Projects {
+.Project {
   position: relative;
+   
 }
 
 .project {
@@ -238,30 +171,53 @@ width: 60%;
   vertical-align: top;
   text-align: center;
   align-items: center;
-  min-height: 50vh;
   background-color: white;
 }
 
 #heading {
   text-align: center;
-  font-size: 4rem;
-  padding-top: 7rem;
-  margin-top: 5px;
-  text-decoration: underline;
+  font-size: 5rem;
+  padding-top: 5rem;
+  margin-top: 2px;
+  font-family: Playfair Display, serif;
 }
 
 .section-container {
-  min-height: vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+     display: flex;
+  flex-wrap: wrap;   /* allows wrapping */
+  justify-content: center;  /* centers items */
+  gap: 2rem;  
+}
+
+.project{
+  background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+     
+  
 }
 
 .project img {
-  max-width: 50%;
-  height: 50%;
-  margin-bottom: 10px;
+ width: 100%;
+    height: 200px;
+    object-fit: cover;
   /* Optional: Adjust spacing */
+}
+
+.project h2 {
+    font-family: Playfair Display, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+ 
+   font-size: 1rem;
+    color:grey;
+    line-height: 1.5;
 }
 
 .project button {
@@ -279,55 +235,72 @@ width: 60%;
 
 }
 
-.Contact {
-  min-height: 100vh;
-  margin: 3rem;
-  background-color: white;
-  padding-top: 60px;
+.contact {
+    padding: 5rem 1.5rem;
 }
 
-.Contact h1 {
-  margin-top: 50px;
-  font-size: 3rem;
-  text-decoration: underline;
-  text-align: center;
+.contact-heading{
+font-family:playfair Display, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 3rem;
 }
 
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.contact-form label {
-  margin-bottom: 5px;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  margin-bottom: 10px;
-  padding: 5px;
+.contact-item i {
+    color: grey;
+    width: 1.25rem;
 }
 
-.contact-form textarea {
-  height: 100px;
+.contact-item span {
+    font-size: 1.125rem;
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #0a0c0e;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+.contact-cta-heading {
+    font-family:playfair Display, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
-.contact-form button:hover {
-  background-color: #0056b3;
+.contact-cta-description {
+    color:grey;
+    line-height: 1.6;
+}
+
+.contact-image {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 #scrollToTopButton {
@@ -347,7 +320,7 @@ width: 60%;
 }
 
 .footer {
-  background-color: #525358ef;
+  background-color: #0a0a0bef;
   color:rgb(252, 248, 248);
   text-align: center;
   font-size: 1rem;
