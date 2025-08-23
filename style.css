@@ -18,6 +18,12 @@ body {
   background-color:white;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
 
 
 
@@ -29,6 +35,11 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  display: flex;
+  
+  /* centers everything horizontally */
+ 
+  text-align: center; 
 
 }
 
@@ -36,6 +47,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .subtitle {
@@ -53,7 +66,7 @@ body {
   font-weight: 300;
   margin-bottom: 0.25rem;
   font-family:  Playfair Display, serif;
-  
+  color:#555;
 }
 
 .title span {
@@ -61,22 +74,49 @@ body {
   font-weight: 500;
  font-family:Playfair Display, serif;
   margin-bottom: 0.25rem;
+  color:#000;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.social-media {
+  display: flex;              /* arrange children in a row */
+  gap: 5px;                  /* space between icons */
+  align-items: center;        /* vertically center in case parent has height */
+  justify-content: center; 
+   margin-right: 30px;     /* center the row horizontally */
+}
 .social-media a {
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  margin: 3px;
+   display: flex;            /* makes it a flex container */
+   align-items: center;      /* centers icon vertically */
+  justify-content: center;  /* centers icon horizontally */
+  width: 45px;              /* fixed width */
+  height: 45px;             /* fixed height ensures perfect circle */
+  padding: 0;               /* remove extra padding */
+  margin: 1px;
   background: transparent;
   border: .2rem solid;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 30px;
+  
+    transition: all 0.3s ease;
+   
+  
+   
+}
+
+.social-media a i{
+  line-height: 1;
 }
 
 .twitter_handle {
-  color: #1e9fe9;
+  color: #465b67;
   font-size: 35px;
 }
 
@@ -87,6 +127,16 @@ body {
 }
 .git_handle{
   color:rgba(58, 50, 50, 0.87);
+  font-size:35px;
+}
+
+.gmail_handle { 
+  color: #9a7774;
+  font-size:35px;
+ } 
+
+.resume_handle {
+  color: #6e6b6b;
   font-size:35px;
 }
 
@@ -111,7 +161,7 @@ width: 60%;
   border-radius: 50%;
 }
 
-.About{
+.AboutMe{
   display: flex;
   gap: 2rem;
   background:white;
@@ -120,11 +170,11 @@ width: 60%;
   margin-left: 35px;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
   text-align: center;
 }
 
-.About .title {
+.AboutMe .title {
   color: rgb(3, 3, 29);
   font-size: 5rem;
   justify-content: center;
@@ -133,7 +183,7 @@ width: 60%;
 
 }
 
-.About p {
+.AboutMe p {
   font-size: 1.5rem;
   margin: .25rem;
   color: grey;
@@ -142,96 +192,194 @@ width: 60%;
 }
 
 
-.About .skills a {
-  padding: 2px;
-  margin: 3.5px;
-  font-size: 50px;
-  color: inherit;
-  border: .2rem solid;
-  border-radius: 50%;
-  text-decoration: none;
-  background: transparent;
-  align-items: center;
+.AboutMe .skills {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.Project {
-  position: relative;
-   
+.AboutMe .skills i {
+  font-size: 40px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project {
-  margin: 30px;
-  width: 30%;
-  border: 2px solid #ccc;
-  border-radius: 2rem;
-  padding: 40px;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  align-items: center;
-  background-color: white;
+.AboutMe .skills i:hover {
+   transform: scale(1.3);
+   transition: transform 0.3s ease, filter 0.3s ease;
+
 }
 
-#heading {
-  text-align: center;
+
+.experience {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+.experience-title{
+  color: rgb(3, 3, 29);
   font-size: 5rem;
-  padding-top: 5rem;
-  margin-top: 2px;
-  font-family: Playfair Display, serif;
+  justify-content: center;
+  align-items: center;
+   font-family: Playfair Display, serif;
 }
 
-.section-container {
-     display: flex;
-  flex-wrap: wrap;   /* allows wrapping */
-  justify-content: center;  /* centers items */
-  gap: 2rem;  
+.experience-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.project{
-  background-color: var(--white);
+
+
+.experience-left {
+  flex: 1;
+}
+
+.experience-intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.experience-list li {
+  margin-bottom: 1.2rem;
+}
+
+.experience-list h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  font-family: playfair Display, serif;
+  color:#000
+}
+
+.experience-list span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.experience-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.experience-right img {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 1 / 1; /* makes it a perfect square */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+.portfolio {
+    padding: 5rem 1.5rem;
+}
+
+.portfolio-heading {
+    font-family: Playfair Display, serif;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 7rem;
+    color: rgb(3, 3, 29);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
-     
-  
 }
 
-.project img {
- width: 100%;
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-card img {
+    width: 100%;
     height: 200px;
     object-fit: cover;
-  /* Optional: Adjust spacing */
 }
 
-.project h2 {
-    font-family: Playfair Display, serif;
-    font-size: 2rem;
-    font-weight: 600;
+.portfolio-card-content {
+    padding: 1.5rem;
+    
+}
+
+.portfolio-card-title {
+    font-family:playfair Display, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
-.project p {
- 
-   font-size: 1rem;
-    color:grey;
+.portfolio-card-description {
+    font-size: 0.875rem;
+    color: grey;
     line-height: 1.5;
 }
 
-.project button {
-  color: black;
+
+
+.portfolio-btn {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 10px;
   background-color: white;
-  border: 2px solid grey;
-  border-radius: 2rem;
-  width: 60px;
-  font-weight: 600;
+  color: #0b0a0a;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  
+  
 }
 
-.project button:hover {
-  color: white;
-  background-color: black;
+.portfolio-btn:hover {
+  color:#465b67;
+  font-weight: 200;
+}
+
+.philosophy {
+    padding: 5rem 1.5rem;
+    color: rgb(20, 19, 19);
+    background-color:#f9f9f9;
+    text-align: center;
+}
+.philosophy-heading {
+    font-family: playfair Display, serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.philosophy-heading em {
+    font-style: italic;
+      font-family: playfair Display, serif;
 
 }
 
@@ -241,10 +389,11 @@ width: 60%;
 
 .contact-heading{
 font-family:playfair Display, serif;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 550;
     line-height: 1.1;
     margin-bottom: 3rem;
+  
 }
 
 .contact-content {
@@ -288,20 +437,7 @@ font-family:playfair Display, serif;
     line-height: 1.6;
 }
 
-.contact-image {
-    display: flex;
-    justify-content: center;
-   
-}
 
-.contact-image img {
-    width: 100%;
-    max-width: 300px;
-    max-height: 300px;;
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
 
 #scrollToTopButton {
   align-items: center;
@@ -320,8 +456,7 @@ font-family:playfair Display, serif;
 }
 
 .footer {
-  background-color: #0a0a0bef;
-  color:rgb(252, 248, 248);
+  color:rgb(16, 16, 16);
   text-align: center;
   font-size: 1rem;
   height: 60px;
@@ -334,17 +469,6 @@ font-family:playfair Display, serif;
     padding: 0;
     margin: 0;
     font-size: 14px;
-  }
-
-  .nav__content {
-    flex-direction: column;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  ul {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .Home__container {
@@ -361,34 +485,99 @@ font-family:playfair Display, serif;
     height: 250px;
   }
 
-  .About {
-    flex-direction: column;
+   .Home__container .title {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    font-size: 2rem; 
     text-align: center;
-    margin: 0 auto;
-    padding: 1rem;
-    align-items: center;
   }
 
-  .About .skills {
-    flex-wrap: wrap;
-    justify-content: center;
+  .Home__container .title span {
+    font-size: 4rem;
+    display: block;
+    margin-top: 0.3rem; 
   }
 
+  .Home__container .subtitle {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+  }
 
-.Projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .Home__container .social-media {
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+  
+
+
+  .AboutMe {
+    padding: 1rem 0.5rem;
+    text-align: center;
+    max-width: 100%;
+     margin: 0 auto;
+  }
+
+  .About_content {
+     max-width: 900px;
+     margin: 0 auto;
+  }
+
+  .AboutMe .title {
+    margin-bottom: 30px;
+    font-size: 3.5rem;
+  }
+
+  .AboutMe .description{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify; 
+    padding: 0 0rem;
+    color:grey;
+  }
+
+  .skills {
+    gap: 1rem;
+  }
+
+  .skills i {
+    font-size: 5px;  
+      
+  }
+
+    .experience-content {
+    flex-direction: column;
+  }
+
+  .experience-title{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .experience-right {
+    margin-top: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-heading{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+.portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-card img {
+  width: 100%;
+  height: 200px;        /* adjust as needed */
+  object-fit: cover;    /* keeps focus without distortion */
+  display: block;
 }
 
-  .project {
-    width: 100%;
-    margin: 10px 0;
-    padding: 20px;
-    display: block;
-    width: 100%;
-  }
-
+   
   .Contact {
     margin: 1rem;
     padding: 1rem;
@@ -399,12 +588,42 @@ font-family:playfair Display, serif;
     max-width: 100%;
   }
 
-  .footer {
-    font-size: 0.9rem;
-    padding: 1rem;
+ 
+
+   .footer-contact pre {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    display: block;
+    text-align: center;
   }
 }
 
+ @media (min-width: 1024px) {
+    
+    .portfolio-heading {
+        font-size: 4rem;
+    }
+    
+    .philosophy-heading {
+        font-size: 4.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
 
 
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
