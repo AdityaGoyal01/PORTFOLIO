@@ -83,6 +83,20 @@ body {
   margin-bottom: 2rem;
   line-height: 1.5;
   color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid black; 
+  width: 0;  
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 350px }  
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }
 
 .social-media {
@@ -140,6 +154,8 @@ body {
   font-size:35px;
 }
 
+
+
 .social-media a:hover {
   background:white;
   color: var(--primary-color-dark);
@@ -172,6 +188,7 @@ width: 60%;
   align-items: center;
   min-height: 80vh;
   text-align: center;
+
 }
 
 .AboutMe .title {
@@ -186,10 +203,16 @@ width: 60%;
 .AboutMe p {
   font-size: 1.5rem;
   margin: .25rem;
-  color: grey;
+   color:rgb(117, 117, 117);
    font-family: Playfair Display, serif;
    margin-bottom: 1.5rem;
 }
+
+.AboutMe .description span{
+    color:rgb(57, 57, 57);
+    margin-left: 1.5rem;
+    font-weight: 500;
+  }
 
 
 .AboutMe .skills {
@@ -198,6 +221,7 @@ width: 60%;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  margin-bottom: 10rem;
 }
 
 .AboutMe .skills i {
@@ -242,7 +266,7 @@ width: 60%;
 
 .experience-intro {
   font-size: 1rem;
-  color: #555;
+  color: grey;
   margin-bottom: 1.5rem;
 }
 
@@ -267,7 +291,7 @@ width: 60%;
 
 .experience-list span {
   font-size: 0.9rem;
-  color: #777;
+  color: grey;
 }
 
 .experience-right {
@@ -296,7 +320,8 @@ width: 60%;
     font-family: Playfair Display, serif;
     font-size: 5rem;
     text-align: center;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
     color: rgb(3, 3, 29);
 }
 
@@ -456,12 +481,35 @@ font-family:playfair Display, serif;
 }
 
 .footer {
-  color:rgb(16, 16, 16);
+  color: rgb(16, 16, 16);
   text-align: center;
   font-size: 1rem;
   height: 60px;
-  overflow: hidden;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact {
+  display: flex;             
+  align-items: center;        
+  gap: 10px;                 
+}
+
+.footer pre {
+  margin: 0;                 
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;                  
+}
+
+.footer-social a {
+  font-size: 20px;         
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -506,8 +554,9 @@ font-family:playfair Display, serif;
   }
 
   .Home__container .social-media {
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
     text-align: center;
+    margin-left: 1.5rem;
   }
   
 
@@ -534,7 +583,13 @@ font-family:playfair Display, serif;
     line-height: 1.6;
     text-align: justify; 
     padding: 0 0rem;
-    color:grey;
+    color:rgb(117, 117, 117);
+  }
+
+  .AboutMe .description span{
+    color:rgb(57, 57, 57);
+    margin-left: 1.5rem;
+    font-weight: 300;
   }
 
   .skills {
